@@ -1,0 +1,53 @@
+.nbar{
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-bottom: 1px solid white;
+}
+
+.logo{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+}
+
+.ul-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+}
+
+.mode {
+    color: white;
+    border: none;
+    width: 40px;
+    /* Adjust the width and height to your desired size */
+    height: 40px;
+    /* Adjust the width and height to your desired size */
+    border-radius: 50%;
+    /* Make the button circular */
+    margin: 0.5rem;
+    background-color: #302a2a;
+}
+
+.link{
+    color: white;
+    font-weight: 500;
+    text-decoration-line: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-bottom: 0.1rem transparent #121212;
+    transition: transform 0.4s ease;
+}
+.link:hover{
+    transform: scale(1.2);
+}
+
+.svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
