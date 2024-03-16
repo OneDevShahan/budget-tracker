@@ -1,35 +1,40 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState } from "react";
 
 export const ExpenseContext = createContext();
 
 export const ExpenseProvider = ({ children }) => {
-    const sampleExpenses = [
-  {
-    id: 1,
-    description: 'Groceries',
-    amount: 50.00,
-  },
-  {
-    id: 2,
-    description: 'Utility Bill',
-    amount: 100.00,
-  },
-  {
-    id: 3,
-    description: 'Dinner with Friends',
-    amount: 80.00,
-  },
-  {
-    id: 4,
-    description: 'Internet Subscription',
-    amount: 60.00,
-  },
-  {
-    id: 5,
-    description: 'Movie Tickets',
-    amount: 25.00,
-  },
-];
+  const sampleExpenses = [
+    {
+      id: 1,
+      description: "Groceries",
+      amount: 50.0,
+      date: "2024-03-15",
+    },
+    {
+      id: 2,
+      description: "Utility Bill",
+      amount: 100.0,
+      date: "2024-03-15",
+    },
+    {
+      id: 3,
+      description: "Dinner with Friends",
+      amount: 80.0,
+      date: "2024-03-15",
+    },
+    {
+      id: 4,
+      description: "Internet Subscription",
+      amount: 60.0,
+      date: "2024-03-15",
+    },
+    {
+      id: 5,
+      description: "Movie Tickets",
+      amount: 25.0,
+      date: "2024-03-15",
+    },
+  ];
   const [expenses, setExpenses] = useState(sampleExpenses);
 
   const addExpense = (expense) => {

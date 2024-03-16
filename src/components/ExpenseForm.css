@@ -1,17 +1,30 @@
-.heading{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    padding: auto;
+.container{
+    margin: 1.5rem;
+    text-align: center;
 }
-
-.expense{
+    
+.form{
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    min-width: 500px;
-    max-width: 700px;
+    padding: 1rem;
+    min-width: 400px;
+    max-width: 500px;
+    height: 390px;
     margin: auto;
+    /* Add shadow effect */
+    box-shadow: 0 0 10px rgba(130, 129, 129, 0.1);
+}
+
+#description{
+    width: 400px;
+}
+
+#amount{
+    width: 400px;
+}
+
+#dateInput{
+    width: 400px;
 }
 
 .amount-date{
@@ -34,8 +47,9 @@
 .button{
     color: white;
     border: none;
+    width: 160px;
+    height: 50px;
     border-radius: 5px;
-    margin: 1rem;
     padding: 0.5rem;
     background-color: #302a2a;
 }
