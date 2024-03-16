@@ -2,6 +2,7 @@
 import React, { useState, useContext } from "react";
 import { ExpenseContext } from "../context/ExpenseContext";
 import "../components/ExpenseForm.css";
+import { Link } from "react-router-dom";
 
 const ExpenseForm = ({ expense, onSubmit }) => {
   const { addExpense, updateExpense } = useContext(ExpenseContext);
@@ -52,9 +53,6 @@ const ExpenseForm = ({ expense, onSubmit }) => {
     } else {
       addExpense(newExpense);
     }
-    setDescription("");
-    setAmount("");
-    setDate("");
     onSubmit && onSubmit();
   };
 
@@ -72,9 +70,12 @@ const ExpenseForm = ({ expense, onSubmit }) => {
               name="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="input-text"
+              className={`input-text ${
+                !description || !amount ? "validationError" : ""
+              }`}
               placeholder="Description of the expense"
             />
+            {!description && <p className="required">Required*</p>}
             {/* <div className="amount-date"> */}
             <input
               type="number"
@@ -82,9 +83,12 @@ const ExpenseForm = ({ expense, onSubmit }) => {
               name="amount"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              className="input-text"
+              className={`input-text ${
+                !description || !amount ? "validationError" : ""
+              }`}
               placeholder="Amount spent"
             />
+            {!amount && <p className="required">Required*</p>}
             <input
               type="date"
               id="dateInput"
@@ -97,13 +101,21 @@ const ExpenseForm = ({ expense, onSubmit }) => {
             />
             {/* </div> */}
           </div>
-          <button className="button" type="submit" onClick={handleSubmit}>
+          <button
+            className="button"
+            disabled={!description || !amount}
+            type="submit"
+            onClick={handleSubmit}
+          >
             Add Expense
           </button>
           {/* Alert component */}
           {showAlert && (
             <div className="alert alert-success my-2" role="alert">
-              Your expense added successfully!
+              Your expense added successfully!{" "}
+              <Link to="/" style={{ textDecoration: "none" }}>
+                View
+              </Link>
             </div>
           )}
         </div>

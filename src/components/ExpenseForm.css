@@ -9,10 +9,21 @@
     padding: 1rem;
     min-width: 400px;
     max-width: 500px;
-    height: 390px;
+    height: 425px;
     margin: auto;
-    /* Add shadow effect */
     box-shadow: 0 0 10px rgba(130, 129, 129, 0.1);
+    border-radius: 22px;
+}
+
+.validationError{
+    border: 2px solid red;
+}
+
+.required{
+    text-align: left;
+    color: red;
+    font-weight: 600;
+    margin-left: 35px;
 }
 
 #description{
@@ -45,11 +56,18 @@
 }
 
 .button{
-    color: white;
+    color: black;
+    font-size: large;
+    font-weight: 600;
     border: none;
     width: 160px;
     height: 50px;
     border-radius: 5px;
     padding: 0.5rem;
-    background-color: #302a2a;
+    background-color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.button:hover{
+    transform: scale(1.1);
 }
