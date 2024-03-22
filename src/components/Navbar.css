@@ -50,3 +50,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.coffee{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 1.5rem;
+    list-style: none;
+}
